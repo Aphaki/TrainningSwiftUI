@@ -21,6 +21,7 @@
 		7F575B7127CA83D9002379C7 /* DragGestureBootcamp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F575B7027CA83D9002379C7 /* DragGestureBootcamp2.swift */; };
 		7F575B7327CC05CA002379C7 /* LongPressGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F575B7227CC05C9002379C7 /* LongPressGestureByApple.swift */; };
 		7F64755527D5FF0000CD5D1B /* MaskBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64755427D5FF0000CD5D1B /* MaskBootcamp.swift */; };
+		7F6505F82877A73E0054537C /* AlertByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6505F72877A73E0054537C /* AlertByApple.swift */; };
 		7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */; };
 		7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD71E728698A1000BE313E /* CacheBootcamp.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		7F575B7027CA83D9002379C7 /* DragGestureBootcamp2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureBootcamp2.swift; sourceTree = "<group>"; };
 		7F575B7227CC05C9002379C7 /* LongPressGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureByApple.swift; sourceTree = "<group>"; };
 		7F64755427D5FF0000CD5D1B /* MaskBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskBootcamp.swift; sourceTree = "<group>"; };
+		7F6505F72877A73E0054537C /* AlertByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertByApple.swift; sourceTree = "<group>"; };
 		7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureByApple.swift; sourceTree = "<group>"; };
 		7FAD71E728698A1000BE313E /* CacheBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				7F3CF1C327D34EBD002FF8E4 /* SheetByApple.swift */,
 				7F64755427D5FF0000CD5D1B /* MaskBootcamp.swift */,
 				7FAD71E728698A1000BE313E /* CacheBootcamp.swift */,
+				7F6505F72877A73E0054537C /* AlertByApple.swift */,
 				7F3E7E7C27C767EC007CEF73 /* Assets.xcassets */,
 				7F3E7E7E27C767EC007CEF73 /* Preview Content */,
 			);
@@ -179,6 +182,7 @@
 				7F3E7E7927C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift in Sources */,
 				7F1DD2B527CDADED00E69EFB /* MagnificationGestureByApple.swift in Sources */,
 				7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */,
+				7F6505F82877A73E0054537C /* AlertByApple.swift in Sources */,
 				7F3E7E8927C86BB3007CEF73 /* MagnificationGestureBootcamp.swift in Sources */,
 				7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */,
 				7F1DD2B727CF00FF00E69EFB /* DragGestureByApple.swift in Sources */,
