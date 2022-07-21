@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 class NotificationManager {
     static let shared = NotificationManager()
@@ -52,6 +53,23 @@ class NotificationManager {
         
         UNUserNotificationCenter.current().add(request)
     }
+    func scheduleLocationNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "강남역에 도착하였습니다. 알림 타이틀!!"
+        content.subtitle = "강남역을 벗어나셨습니다. 알림 서브타이틀!!"
+        content.sound = .default
+        content.badge = NSNumber(value: UIApplication.shared.applicationIconBadgeNumber + 1)
+        
+        let gangnamStationCoordinate = CLLocationCoordinate2D(latitude: 37.497952, longitude: 127.027619)
+        let region = CLCircularRegion(center: gangnamStationCoordinate, radius: 100, identifier: UUID().uuidString)
+        region.notifyOnEntry = true
+        region.notifyOnExit = true
+        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
+    }
     func cancelNotification() {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
@@ -85,6 +103,16 @@ struct NotificationBootcamp: View {
                 NotificationManager.shared.scheduleAlarmNotification()
             } label: {
                 Text("지정 시각이 되면 알림이 옵니다")
+                    .font(.headline)
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            Button {
+                NotificationManager.shared.scheduleLocationNotification()
+            } label: {
+                Text("강남역 출발,도착 알림미")
                     .font(.headline)
                     .padding()
                     .background(.blue)
