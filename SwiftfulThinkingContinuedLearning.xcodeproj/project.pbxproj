@@ -24,6 +24,7 @@
 		7F6505F82877A73E0054537C /* AlertByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6505F72877A73E0054537C /* AlertByApple.swift */; };
 		7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */; };
 		7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD71E728698A1000BE313E /* CacheBootcamp.swift */; };
+		7FF126102888DAEA00D9069B /* NotificationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		7F6505F72877A73E0054537C /* AlertByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertByApple.swift; sourceTree = "<group>"; };
 		7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureByApple.swift; sourceTree = "<group>"; };
 		7FAD71E728698A1000BE313E /* CacheBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBootcamp.swift; sourceTree = "<group>"; };
+		7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7F3E7E8627C7699D007CEF73 /* LongPressGestureBootcamp.swift */,
 				7F575B7227CC05C9002379C7 /* LongPressGestureByApple.swift */,
 				7F3E7E8827C86BB3007CEF73 /* MagnificationGestureBootcamp.swift */,
+				7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */,
 				7F1DD2B427CDADED00E69EFB /* MagnificationGestureByApple.swift */,
 				7F575B6E27CA748F002379C7 /* DragGestureBootcamp.swift */,
 				7F575B7027CA83D9002379C7 /* DragGestureBootcamp2.swift */,
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F3E7E7B27C767EC007CEF73 /* ContentView.swift in Sources */,
+				7FF126102888DAEA00D9069B /* NotificationBootcamp.swift in Sources */,
 				7F2522DD27CF68D3002A0C8B /* ScrollViewReaderByApple.swift in Sources */,
 				7F575B7327CC05CA002379C7 /* LongPressGestureByApple.swift in Sources */,
 				7F3E7E7927C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift in Sources */,
