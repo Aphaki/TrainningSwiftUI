@@ -19,6 +19,11 @@ class HapticManager {
         let generator = UIImpactFeedbackGenerator(style: style)
         generator.impactOccurred()
     }
+    
+    func selection() {
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
+    }
 }
 
 struct HapticBootcamp: View {
@@ -36,6 +41,7 @@ struct HapticBootcamp: View {
             Button("light".uppercased()) { HapticManager.shared.impact(style: .light) }
             Button("rigid".uppercased()) { HapticManager.shared.impact(style: .rigid) }
             Button("soft".uppercased()) { HapticManager.shared.impact(style: .soft) }
+            Divider()
         }
     }
 }
