@@ -25,6 +25,7 @@
 		7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */; };
 		7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD71E728698A1000BE313E /* CacheBootcamp.swift */; };
 		7FF126102888DAEA00D9069B /* NotificationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */; };
+		7FF1261228894DF000D9069B /* HapticBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1261128894DF000D9069B /* HapticBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		7F8F7E2327CF5353000170D1 /* RotationGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureByApple.swift; sourceTree = "<group>"; };
 		7FAD71E728698A1000BE313E /* CacheBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBootcamp.swift; sourceTree = "<group>"; };
 		7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBootcamp.swift; sourceTree = "<group>"; };
+		7FF1261128894DF000D9069B /* HapticBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7F3E7E7827C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift */,
 				7F3E7E7A27C767EC007CEF73 /* ContentView.swift */,
 				7F3E7E8627C7699D007CEF73 /* LongPressGestureBootcamp.swift */,
+				7FF1261128894DF000D9069B /* HapticBootcamp.swift */,
 				7F575B7227CC05C9002379C7 /* LongPressGestureByApple.swift */,
 				7F3E7E8827C86BB3007CEF73 /* MagnificationGestureBootcamp.swift */,
 				7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */,
@@ -188,6 +191,7 @@
 				7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */,
 				7F6505F82877A73E0054537C /* AlertByApple.swift in Sources */,
 				7F3E7E8927C86BB3007CEF73 /* MagnificationGestureBootcamp.swift in Sources */,
+				7FF1261228894DF000D9069B /* HapticBootcamp.swift in Sources */,
 				7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */,
 				7F1DD2B727CF00FF00E69EFB /* DragGestureByApple.swift in Sources */,
 				7F575B7127CA83D9002379C7 /* DragGestureBootcamp2.swift in Sources */,
