@@ -26,6 +26,9 @@
 		7FAD71E828698A1000BE313E /* CacheBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD71E728698A1000BE313E /* CacheBootcamp.swift */; };
 		7FF126102888DAEA00D9069B /* NotificationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */; };
 		7FF1261228894DF000D9069B /* HapticBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1261128894DF000D9069B /* HapticBootcamp.swift */; };
+		7FF12614288AF52600D9069B /* AVAudioPlayerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */; };
+		7FF12617288B18F000D9069B /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FF12616288B18F000D9069B /* punch.mp3 */; };
+		7FF12619288B192600D9069B /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FF12618288B192600D9069B /* pop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		7FAD71E728698A1000BE313E /* CacheBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBootcamp.swift; sourceTree = "<group>"; };
 		7FF1260F2888DAEA00D9069B /* NotificationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBootcamp.swift; sourceTree = "<group>"; };
 		7FF1261128894DF000D9069B /* HapticBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticBootcamp.swift; sourceTree = "<group>"; };
+		7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerBootcamp.swift; sourceTree = "<group>"; };
+		7FF12616288B18F000D9069B /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
+		7FF12618288B192600D9069B /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				7F64755427D5FF0000CD5D1B /* MaskBootcamp.swift */,
 				7FAD71E728698A1000BE313E /* CacheBootcamp.swift */,
 				7F6505F72877A73E0054537C /* AlertByApple.swift */,
+				7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */,
+				7FF12615288B18CD00D9069B /* Sounds */,
 				7F3E7E7C27C767EC007CEF73 /* Assets.xcassets */,
 				7F3E7E7E27C767EC007CEF73 /* Preview Content */,
 			);
@@ -110,6 +118,15 @@
 				7F3E7E7F27C767EC007CEF73 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FF12615288B18CD00D9069B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7FF12618288B192600D9069B /* pop.mp3 */,
+				7FF12616288B18F000D9069B /* punch.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +187,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF12619288B192600D9069B /* pop.mp3 in Resources */,
 				7F3E7E8027C767EC007CEF73 /* Preview Assets.xcassets in Resources */,
+				7FF12617288B18F000D9069B /* punch.mp3 in Resources */,
 				7F3E7E7D27C767EC007CEF73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +211,7 @@
 				7F6505F82877A73E0054537C /* AlertByApple.swift in Sources */,
 				7F3E7E8927C86BB3007CEF73 /* MagnificationGestureBootcamp.swift in Sources */,
 				7FF1261228894DF000D9069B /* HapticBootcamp.swift in Sources */,
+				7FF12614288AF52600D9069B /* AVAudioPlayerBootcamp.swift in Sources */,
 				7F8F7E2427CF5353000170D1 /* RotationGestureByApple.swift in Sources */,
 				7F1DD2B727CF00FF00E69EFB /* DragGestureByApple.swift in Sources */,
 				7F575B7127CA83D9002379C7 /* DragGestureBootcamp2.swift in Sources */,
