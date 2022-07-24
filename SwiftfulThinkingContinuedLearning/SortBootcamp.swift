@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct FriendInfo: Identifiable {
     let id = UUID()
@@ -19,8 +20,11 @@ struct FriendInfo: Identifiable {
 class SortBootcampVM: ObservableObject {
     @Published var friendList: [FriendInfo] = []
     @Published var sortOption: SortOption = .defaultCase
+    
+    var subscription = Set<AnyCancellable>()
     init() {
         initList()
+        combineSortAndList()
     }
     
     enum SortOption {
@@ -42,23 +46,26 @@ class SortBootcampVM: ObservableObject {
             friend1, friend2, friend3, friend4, friend5, friend6, friend7, friend8, friend9, friend10
         ])
     }
-    func sortAge(sortOption: SortOption) {
-        switch sortOption {
-        case .age:
-            let sortedArray =
-            friendList.sorted { friend1, friend2 in
-                return friend1.age > friend2.age
-            }
-            friendList = sortedArray
-        case .ageReverse:
-            let sortedArray =
-            friendList.sorted { friend1, friend2 in
-                return friend1.age < friend2.age
-            }
-            friendList = sortedArray
-        case .defaultCase:
-            break
-        }
+    func combineSortAndList() {
+        $sortOption
+            .sink(receiveCompletion: { completion in
+                print("subscribe: \(completion)")
+            }, receiveValue: { [weak self] option in
+                guard let self = self else { return }
+                switch option {
+                case .age:
+                    let ageSortedArray = self.friendList.sorted { friend1, friend2 in
+                         return friend1.age > friend2.age
+                     }
+                    self.friendList = ageSortedArray
+                case .ageReverse:
+                    self.friendList.sort { friend1, friend2 in
+                        return friend1.age < friend2.age
+                    }
+                case .defaultCase: break
+                }
+            })
+            .store(in: &subscription)
     }
 }
 struct FriendInfoCard: View {
@@ -97,10 +104,10 @@ struct SortBootcamp: View {
                 HStack {
                     Button {
                         if vm.sortOption == .defaultCase || vm.sortOption == .ageReverse {
-                            vm.sortAge(sortOption: .age)
+//                            vm.sortAge(sortOption: .age)
                             vm.sortOption = .age
                         } else if vm.sortOption == .age {
-                            vm.sortAge(sortOption: .ageReverse)
+//                            vm.sortAge(sortOption: .ageReverse)
                             vm.sortOption = .ageReverse
                         }
                     } label: {
