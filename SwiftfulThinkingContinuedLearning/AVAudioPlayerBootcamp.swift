@@ -22,9 +22,7 @@ class AVAudioPlayerManager {
         } catch let error {
             print("playSound error: \(error.localizedDescription)")
         }
-        
     }
-    
 }
 
 struct AVAudioPlayerBootcamp: View {
@@ -42,3 +40,6 @@ struct AVAudioPlayerManager_Previews: PreviewProvider {
         AVAudioPlayerBootcamp()
     }
 }
+// #AVAudioPlayer
+// #Bundle
+// #play()

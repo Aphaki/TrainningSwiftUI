@@ -29,6 +29,7 @@
 		7FF12614288AF52600D9069B /* AVAudioPlayerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */; };
 		7FF12617288B18F000D9069B /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FF12616288B18F000D9069B /* punch.mp3 */; };
 		7FF12619288B192600D9069B /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FF12618288B192600D9069B /* pop.mp3 */; };
+		7FF1261B288CE56000D9069B /* SortBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1261A288CE56000D9069B /* SortBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerBootcamp.swift; sourceTree = "<group>"; };
 		7FF12616288B18F000D9069B /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
 		7FF12618288B192600D9069B /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		7FF1261A288CE56000D9069B /* SortBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				7FAD71E728698A1000BE313E /* CacheBootcamp.swift */,
 				7F6505F72877A73E0054537C /* AlertByApple.swift */,
 				7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */,
+				7FF1261A288CE56000D9069B /* SortBootcamp.swift */,
 				7FF12615288B18CD00D9069B /* Sounds */,
 				7F3E7E7C27C767EC007CEF73 /* Assets.xcassets */,
 				7F3E7E7E27C767EC007CEF73 /* Preview Content */,
@@ -219,6 +222,7 @@
 				7F64755527D5FF0000CD5D1B /* MaskBootcamp.swift in Sources */,
 				7F575B6F27CA748F002379C7 /* DragGestureBootcamp.swift in Sources */,
 				7F3CF1C427D34EBD002FF8E4 /* SheetByApple.swift in Sources */,
+				7FF1261B288CE56000D9069B /* SortBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
