@@ -24,7 +24,7 @@ class SortBootcampVM: ObservableObject {
     var subscription = Set<AnyCancellable>()
     init() {
         initList()
-        combineSortAndList()
+        subscribeSort()
     }
     
     enum SortOption {
@@ -46,8 +46,9 @@ class SortBootcampVM: ObservableObject {
             friend1, friend2, friend3, friend4, friend5, friend6, friend7, friend8, friend9, friend10
         ])
     }
-    func combineSortAndList() {
+    func subscribeSort() {
         $sortOption
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 print("subscribe: \(completion)")
             }, receiveValue: { [weak self] option in
@@ -119,7 +120,6 @@ struct SortBootcamp: View {
                         }
                         
                     }
-
                 }
                 ForEach(vm.friendList) { friend in
                     FriendInfoCard(name: friend.name, gender: friend.gender, contact: friend.contact, relation: friend.relation, age: friend.age)
