@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct FriendInfo: Identifiable {
-    let id = UUID()
+    let id = UUID().uuidString
     let name: String
     let gender: String
     let contact: String
@@ -20,10 +20,24 @@ struct FriendInfo: Identifiable {
 class SortBootcampVM: ObservableObject {
     @Published var friendList: [FriendInfo] = []
     @Published var sortOption: SortOption = .defaultCase
+    @Published var searchBarText: String = ""
     
+    let initFriendList: [FriendInfo] = [
+        FriendInfo(name: "김서연", gender: "👩🏼", contact: "010-1234-5678", relation: "고등학교", age: 20),
+        FriendInfo(name: "김민준", gender: "🧑🏼", contact: "010-2345-6789", relation: "고등학교", age: 21),
+        FriendInfo(name: "이서준", gender: "🧑🏼", contact: "010-3456-7890", relation: "중학교", age: 22),
+        FriendInfo(name: "민서윤", gender: "👩🏼", contact: "010-4567-8901", relation: "대학교", age: 23),
+        FriendInfo(name: "최시우", gender: "🧑🏼", contact: "010-5678-9012", relation: "고등학교", age: 24),
+        FriendInfo(name: "박서진", gender: "🧑🏼", contact: "010-6789-0123", relation: "회사", age: 24),
+        FriendInfo(name: "신지안", gender: "👩🏼", contact: "010-7890-1234", relation: "회사", age: 23),
+        FriendInfo(name: "정우진", gender: "🧑🏼", contact: "010-8901-2345", relation: "중학교", age: 22),
+        FriendInfo(name: "박현준", gender: "🧑🏼", contact: "010-9012-3456", relation: "중학교", age: 21),
+        FriendInfo(name: "최영진", gender: "🧑🏼", contact: "010-0123-4567", relation: "대학교", age: 20)
+    ]
     var subscription = Set<AnyCancellable>()
     init() {
         initList()
+        subscribeSearchText()
         subscribeSort()
     }
     
@@ -32,20 +46,31 @@ class SortBootcampVM: ObservableObject {
     }
     
     func initList() {
-        let friend1 = FriendInfo(name: "김서연", gender: "👩🏼", contact: "010-1234-5678", relation: "고등학교", age: 20)
-        let friend2 = FriendInfo(name: "김민준", gender: "🧑🏼", contact: "010-2345-6789", relation: "고등학교", age: 21)
-        let friend3 = FriendInfo(name: "이서준", gender: "🧑🏼", contact: "010-3456-7890", relation: "중학교", age: 22)
-        let friend4 = FriendInfo(name: "민서윤", gender: "👩🏼", contact: "010-4567-8901", relation: "대학교", age: 23)
-        let friend5 = FriendInfo(name: "최시우", gender: "🧑🏼", contact: "010-5678-9012", relation: "고등학교", age: 24)
-        let friend6 = FriendInfo(name: "박서진", gender: "🧑🏼", contact: "010 -6789-0123", relation: "회사", age: 24)
-        let friend7 = FriendInfo(name: "신지안", gender: "👩🏼", contact: "010 -7890-1234", relation: "회사", age: 23)
-        let friend8 = FriendInfo(name: "정우진", gender: "🧑🏼", contact: "010 -8901-2345", relation: "중학교", age: 22)
-        let friend9 = FriendInfo(name: "박현준", gender: "🧑🏼", contact: "010 -9012-3456", relation: "중학교", age: 21)
-        let friend10 = FriendInfo(name: "최영진", gender: "🧑🏼", contact: "010 -0123-4567", relation: "대학교", age: 20)
-        friendList.append(contentsOf: [
-            friend1, friend2, friend3, friend4, friend5, friend6, friend7, friend8, friend9, friend10
-        ])
+        friendList = initFriendList
     }
+    func subscribeSearchText() {
+        $searchBarText
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .map { text -> [FriendInfo] in
+                if text.isEmpty == false {
+                    let filteredList = self.initFriendList.filter { friendInfo in
+                        let ageString = "\(friendInfo.age)"
+                        return friendInfo.contact.contains(text) ||
+                        friendInfo.name.contains(text) ||
+                        friendInfo.relation.contains(text) ||
+                        ageString.contains(text)
+                    }
+                    return filteredList
+                }
+                return self.initFriendList
+            }
+            .sink { [weak self] filteredList in
+                guard let self = self else { return }
+                self.friendList = filteredList
+            }
+            .store(in: &subscription)
+    }
+    
     func subscribeSort() {
         $sortOption
             .receive(on: DispatchQueue.main)
@@ -95,6 +120,17 @@ struct FriendInfoCard: View {
             .foregroundColor(.white)
     }
 }
+struct SearchBarView: View {
+    
+    @Binding var searchBarText: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+            TextField("Search Keyword", text: $searchBarText)
+        }
+    }
+}
 
 struct SortBootcamp: View {
     @StateObject var vm = SortBootcampVM()
@@ -105,10 +141,8 @@ struct SortBootcamp: View {
                 HStack {
                     Button {
                         if vm.sortOption == .defaultCase || vm.sortOption == .ageReverse {
-//                            vm.sortAge(sortOption: .age)
                             vm.sortOption = .age
                         } else if vm.sortOption == .age {
-//                            vm.sortAge(sortOption: .ageReverse)
                             vm.sortOption = .ageReverse
                         }
                     } label: {
@@ -120,7 +154,9 @@ struct SortBootcamp: View {
                         }
                         
                     }
+                    SearchBarView(searchBarText: $vm.searchBarText)
                 }
+                .padding()
                 ForEach(vm.friendList) { friend in
                     FriendInfoCard(name: friend.name, gender: friend.gender, contact: friend.contact, relation: friend.relation, age: friend.age)
                         .padding()
