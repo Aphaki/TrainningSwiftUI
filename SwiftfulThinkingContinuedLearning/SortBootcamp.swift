@@ -54,7 +54,7 @@ class SortBootcampVM: ObservableObject {
             .map { text -> [FriendInfo] in
                 if text.isEmpty == false {
                     let filteredList = self.initFriendList.filter { friendInfo in
-                        let ageString = "\(friendInfo.age)"
+                        let ageString = "\(friendInfo.age)세"
                         return friendInfo.contact.contains(text) ||
                         friendInfo.name.contains(text) ||
                         friendInfo.relation.contains(text) ||
@@ -95,6 +95,7 @@ class SortBootcampVM: ObservableObject {
     }
 }
 struct FriendInfoCard: View {
+    
     let name: String
     let gender: String
     let contact: String
@@ -105,7 +106,7 @@ struct FriendInfoCard: View {
         VStack {
             HStack(spacing: 5) {
                 Text(name)
-                Text("\(age)")
+                Text("\(age)세")
                 Spacer()
                 Text(relation)
             }
