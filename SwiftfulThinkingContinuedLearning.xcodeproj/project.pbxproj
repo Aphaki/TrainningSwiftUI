@@ -10,6 +10,7 @@
 		7F1DD2B527CDADED00E69EFB /* MagnificationGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DD2B427CDADED00E69EFB /* MagnificationGestureByApple.swift */; };
 		7F1DD2B727CF00FF00E69EFB /* DragGestureByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DD2B627CF00FF00E69EFB /* DragGestureByApple.swift */; };
 		7F2522DD27CF68D3002A0C8B /* ScrollViewReaderByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2522DC27CF68D3002A0C8B /* ScrollViewReaderByApple.swift */; };
+		7F31CB922893B2530095CC29 /* AnimationBasicBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F31CB912893B2530095CC29 /* AnimationBasicBootcamp.swift */; };
 		7F3CF1C427D34EBD002FF8E4 /* SheetByApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CF1C327D34EBD002FF8E4 /* SheetByApple.swift */; };
 		7F3E7E7927C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E7E7827C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift */; };
 		7F3E7E7B27C767EC007CEF73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E7E7A27C767EC007CEF73 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 		7F1DD2B427CDADED00E69EFB /* MagnificationGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGestureByApple.swift; sourceTree = "<group>"; };
 		7F1DD2B627CF00FF00E69EFB /* DragGestureByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureByApple.swift; sourceTree = "<group>"; };
 		7F2522DC27CF68D3002A0C8B /* ScrollViewReaderByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewReaderByApple.swift; sourceTree = "<group>"; };
+		7F31CB912893B2530095CC29 /* AnimationBasicBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBasicBootcamp.swift; sourceTree = "<group>"; };
 		7F3CF1C327D34EBD002FF8E4 /* SheetByApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetByApple.swift; sourceTree = "<group>"; };
 		7F3E7E7527C767EC007CEF73 /* SwiftfulThinkingContinuedLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftfulThinkingContinuedLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3E7E7827C767EC007CEF73 /* SwiftfulThinkingContinuedLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingContinuedLearningApp.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				7FF12613288AF52600D9069B /* AVAudioPlayerBootcamp.swift */,
 				7FF1261A288CE56000D9069B /* SortBootcamp.swift */,
 				7F68E81428924FFC00606487 /* TransitionBootcamp.swift */,
+				7F31CB912893B2530095CC29 /* AnimationBasicBootcamp.swift */,
 				7FF12615288B18CD00D9069B /* Sounds */,
 				7F3E7E7C27C767EC007CEF73 /* Assets.xcassets */,
 				7F3E7E7E27C767EC007CEF73 /* Preview Content */,
@@ -225,6 +228,7 @@
 				7F3E7E8727C7699D007CEF73 /* LongPressGestureBootcamp.swift in Sources */,
 				7F64755527D5FF0000CD5D1B /* MaskBootcamp.swift in Sources */,
 				7F575B6F27CA748F002379C7 /* DragGestureBootcamp.swift in Sources */,
+				7F31CB922893B2530095CC29 /* AnimationBasicBootcamp.swift in Sources */,
 				7F3CF1C427D34EBD002FF8E4 /* SheetByApple.swift in Sources */,
 				7FF1261B288CE56000D9069B /* SortBootcamp.swift in Sources */,
 			);

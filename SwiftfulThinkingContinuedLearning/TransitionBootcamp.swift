@@ -22,91 +22,31 @@ struct CustomTextModifier: ViewModifier {
             .background(backgroundColor)
             .foregroundColor(.white)
             .cornerRadius(20)
-            
             .transition(.offset(x: UIScreen.main.bounds.width,
                                 y: UIScreen.main.bounds.height))
+//            .transition(.scale(scale: 0))
 //            .transition(.slide)
     }
 }
-extension View {
-    func customText(color: Color) -> some View {
-        modifier(CustomTextModifier(color: color))
-    }
-}
-
+//MARK: - Main View
 struct TransitionBootcamp: View {
     
-    @State var showText1: Bool = true
-    @State var showText2: Bool = true
-    @State var showText3: Bool = true
-    @State var showText4: Bool = true
-    @State var showText5: Bool = true
-    
+    @State var showText: Bool = true
     
     var body: some View {
         VStack {
-            
-            HStack {
-                if showText1 {
-                Text("easeIn")
-                        .customText(color: .yellow)
-                }
-                Text("Click")
-                    .onTapGesture {
-                        withAnimation(.easeIn) {
-                            showText1.toggle()
-                        }
-                    }
+            Spacer()
+            if showText {
+            Text("Transition Text!")
+                .customText(color: .green)
             }
-            HStack {
-                if showText2 {
-                Text("easeInOut")
-                        .customText(color: .green)
+            Spacer()
+            Text("click")
+                .onTapGesture {
+//                    withAnimation(.easeIn) {
+                        showText.toggle()
+//                    }
                 }
-                Text("Click")
-                    .onTapGesture {
-                        withAnimation(.easeInOut) {
-                            showText2.toggle()
-                        }
-                    }
-            }
-            HStack {
-                if showText3 {
-                Text("linear")
-                        .customText(color: .blue)
-                }
-                Text("Click")
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            showText3.toggle()
-                        }
-                    }
-            }
-            HStack {
-                if showText4 {
-                Text("spring")
-                        .customText(color: .pink)
-                }
-                Text("Click")
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            showText4.toggle()
-                        }
-                    }
-            }
-            HStack {
-                if showText5 {
-                Text("interactiveSpring")
-                        .customText(color: .brown)
-                }
-                Text("Click")
-                    .onTapGesture {
-                        withAnimation(.interactiveSpring()) {
-                            showText5.toggle()
-                        }
-                    }
-            }
-            
         }
     }
 }
